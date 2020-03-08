@@ -53,6 +53,11 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
+function getRandomQuote(){
+  let num = Math.floor(Math.random() * quotes.length);
+  return num;   
+}
+//alternatively just return Math.floor(Math.random() * quotes.length);
 
 
 
