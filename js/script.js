@@ -67,17 +67,19 @@ function getRandomQuote() {
 function printQuote() {
   let quoteSelected = getRandomQuote();
   let message = `<p class="quote">${quoteSelected.quote}</p>`;
-      message += `<p class="source">${quoteSelected.source}</p>`;
+      message += `<p class="source">${quoteSelected.source}`;
       
-      if () {
-
+      if (quoteSelected.hasOwnProperty('citation')) {
+        message += `<span class="citation">${quoteSelected.citation}</span>`;
       }
 
-      if () {
-        
+      if (quoteSelected.hasOwnProperty('year')) {
+        message += `<span class="year">${quoteSelected.year}</span>`;
       }
-}
-
+      
+      message += `</p>`;
+      return document.getElementById('quote-box').innerHTML = message;
+  }
 
 /***
  * click event listener for the print quote button
