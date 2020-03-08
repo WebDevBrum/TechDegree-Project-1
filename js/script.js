@@ -3,6 +3,53 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
+
+/***
+ * let html = '';
+let rgbColor;
+
+function randomRGB() {
+  return Math.floor(Math.random() * 256 );
+  
+}
+
+function randomColour() {
+  let color = `rgb(`;
+  color += `${randomRGB()},`;
+  color += `${randomRGB()},`;
+  color += `${randomRGB()})`;
+  return color;
+
+}
+
+function print(message) {
+  document.write(message);
+}
+
+for (let i = 1; i <= 10; i += 1) {
+
+rgbColor = randomColour();
+html += '<div style="background-color:' + rgbColor + '"></div>';
+
+}
+
+print(html);
+ * 
+ */
+
+ /***
+  * var myVar;
+
+function myFunction() {
+  myVar = setInterval(alertFunc, 3000);
+}
+
+function alertFunc() {
+  alert("Hello!");
+}
+  * 
+  */
+
 // For assistance: 
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
@@ -60,12 +107,34 @@ function getRandomQuote() {
   return quotes[num];   
 }
 
+/***
+ * Random colour functions
+ * 
+ */
+function randomRGB() {
+  return Math.floor(Math.random() * 256 );
+  
+}
+
+function randomColour() {
+  let color = `rgb(`;
+  color += `${randomRGB()},`;
+  color += `${randomRGB()},`;
+  color += `${randomRGB()})`;
+  return color;
+
+}
+
+function print(message) {
+  document.write(message);
+}
 
 /***
  * `printQuote` function
 ***/
 function printQuote() {
   let quoteSelected = getRandomQuote();
+  let setColour = randomColour();
   let message = `<p class="quote">${quoteSelected.quote}</p>`;
       message += `<p class="source">${quoteSelected.source}`;
       
@@ -78,6 +147,7 @@ function printQuote() {
       }
       
       message += `</p>`;
+      document.body.style.background = setColour; 
       return document.getElementById('quote-box').innerHTML = message;
   }
 
