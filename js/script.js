@@ -93,6 +93,36 @@ let quotes = [
     source: 'Stephen King',
     citation: 'Under The Dome',
     year: '2009'
+  },
+  {
+    quote: 'The scariest moment is alaways just before you start.',
+    source: 'Stephen King',
+    citation: 'On Writing: A Memoir of the Craft',
+    year: '2000'
+  },
+  {
+    quote: 'We all float down here!',
+    source: 'Pennywise the Clown',
+    citation: 'IT',
+    year: '1986'
+  },
+  {
+    quote: 'Some things it dont pay to be curious about.',
+    source: 'Stephen King',
+    citation: 'Pet Sematary',
+    year: '1983'
+  },
+  {
+    quote: "A person who doesn't learn from the past is an idiot in my estimation",
+    source: 'Stephen King',
+    citation: '11/22/63',
+    year: '2011'
+  },
+  {
+    quote: "If a fear cannot be articulated, it can't be conquered",
+    source: 'Stephen King',
+    citation: 'Salems Lot',
+    year: '1975'
   }
 ];
 
