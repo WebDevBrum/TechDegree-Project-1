@@ -55,7 +55,7 @@ let quotes = [
  * Obtains a number between 0 and quotes.length
  * and thenn returns a random quote objecr
 ***/
-function getRandomQuote(){
+function getRandomQuote() {
   let num = Math.floor(Math.random() * quotes.length);
   return quotes[num];   
 }
@@ -64,7 +64,19 @@ function getRandomQuote(){
 /***
  * `printQuote` function
 ***/
+function printQuote() {
+  let quoteSelected = getRandomQuote();
+  let message = `<p class="quote">${quoteSelected.quote}</p>`;
+      message += `<p class="source">${quoteSelected.source}</p>`;
+      
+      if () {
 
+      }
+
+      if () {
+        
+      }
+}
 
 
 /***
