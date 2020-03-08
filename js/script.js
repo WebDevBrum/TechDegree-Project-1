@@ -113,7 +113,6 @@ function getRandomQuote() {
  */
 function randomRGB() {
   return Math.floor(Math.random() * 256 );
-  
 }
 
 function randomColour() {
@@ -122,19 +121,20 @@ function randomColour() {
   color += `${randomRGB()},`;
   color += `${randomRGB()})`;
   return color;
-
 }
 
-function print(message) {
-  document.write(message);
+function setBodyColour() {
+  let setColour = randomColour();
+  document.body.style.background = setColour; 
 }
 
 /***
  * `printQuote` function
 ***/
 function printQuote() {
+  setBodyColour();
   let quoteSelected = getRandomQuote();
-  let setColour = randomColour();
+  
   let message = `<p class="quote">${quoteSelected.quote}</p>`;
       message += `<p class="source">${quoteSelected.source}`;
       
@@ -147,7 +147,7 @@ function printQuote() {
       }
       
       message += `</p>`;
-      document.body.style.background = setColour; 
+      
       return document.getElementById('quote-box').innerHTML = message;
   }
 
