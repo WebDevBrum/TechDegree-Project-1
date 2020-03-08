@@ -51,14 +51,14 @@ let quotes = [
 
 
 /***
- * `getRandomQuote` function
+ * `getRandomQuote` function 
+ * Obtains a number between 0 and quotes.length
+ * and thenn returns a random quote objecr
 ***/
 function getRandomQuote(){
   let num = Math.floor(Math.random() * quotes.length);
-  return num;   
+  return quotes[num];   
 }
-//alternatively just return Math.floor(Math.random() * quotes.length);
-
 
 
 /***
