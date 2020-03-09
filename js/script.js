@@ -126,7 +126,7 @@ let quotes = [
   }
 ];
 
-
+let intervId;
 /***
  * `getRandomQuote` function 
  * Obtains a number between 0 and quotes.length
@@ -158,11 +158,20 @@ function setBodyColour() {
   document.body.style.background = setColour; 
 }
 
+function newTimer() {
+  intervId = setInterval(printQuote, 15000);
+}
+
+function stopTimer() {
+  clearInterval(intervId);
+}
+
 /***
  * `printQuote` function
 ***/
 function printQuote() {
   setBodyColour();
+  
   let quoteSelected = getRandomQuote();
   
   let message = `<p class="quote">${quoteSelected.quote}</p>`;
@@ -181,6 +190,7 @@ function printQuote() {
       return document.getElementById('quote-box').innerHTML = message;
   }
 
+  newTimer();
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
