@@ -52,7 +52,7 @@ let quotes = [
     year: '2009'
   },
   {
-    quote: 'The scariest moment is alaways just before you start.',
+    quote: 'The scariest moment is always just before you start.',
     source: 'Stephen King',
     citation: 'On Writing: A Memoir of the Craft',
     year: '2000'
@@ -86,8 +86,8 @@ let quotes = [
 let intervId;
 /***
  * `getRandomQuote` function 
- * Obtains a number between 0 and quotes.length
- * and thenn returns a random quote objecr
+ *  Obtains a number between 0 and quotes.length
+ *  and then returns a random quote objecr
 ***/
 function getRandomQuote() {
   let num = Math.floor(Math.random() * quotes.length);
@@ -116,17 +116,21 @@ function setBodyColour() {
 }
 
 function newTimer() {
-  intervId = setInterval(printQuote, 15000);
+  intervId = setInterval(printQuote, 10000);
 }
 
 function stopTimer() {
   clearInterval(intervId);
 }
 
+newTimer();
+
 /***
  * `printQuote` function
 ***/
 function printQuote() {
+  stopTimer();
+  newTimer();
   setBodyColour();
   
   let quoteSelected = getRandomQuote();
@@ -151,7 +155,7 @@ function printQuote() {
       return document.getElementById('quote-box').innerHTML = message;
   }
 
-  newTimer();
+  
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
