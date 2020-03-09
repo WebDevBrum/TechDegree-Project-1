@@ -4,51 +4,6 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 
-/***
- * let html = '';
-let rgbColor;
-
-function randomRGB() {
-  return Math.floor(Math.random() * 256 );
-  
-}
-
-function randomColour() {
-  let color = `rgb(`;
-  color += `${randomRGB()},`;
-  color += `${randomRGB()},`;
-  color += `${randomRGB()})`;
-  return color;
-
-}
-
-function print(message) {
-  document.write(message);
-}
-
-for (let i = 1; i <= 10; i += 1) {
-
-rgbColor = randomColour();
-html += '<div style="background-color:' + rgbColor + '"></div>';
-
-}
-
-print(html);
- * 
- */
-
- /***
-  * var myVar;
-
-function myFunction() {
-  myVar = setInterval(alertFunc, 3000);
-}
-
-function alertFunc() {
-  alert("Hello!");
-}
-  * 
-  */
 
 // For assistance: 
   // Check the "Project Resources" section of the project instructions
@@ -74,7 +29,8 @@ let quotes = [
     quote: 'Time takes it all. Whether you want it to or not',
     source: 'Stephen King',
     citation: 'The Green Mile',
-    year: '1996'
+    year: '1997',
+    collection: 'Originally serialised as 6 volumes in 1996' // Additional property for extra credit catergory
   },
   {
     quote: 'We lie best when we lie to ourselves',
@@ -86,7 +42,8 @@ let quotes = [
     quote: "There's no harm in hoping for the best as long as you're prepared for the worst.",
     source: 'Stephen King',
     citation: 'Rita Hayworth and Shawshank Redemption',
-    year: '1982'
+    year: '1982',
+    collection: 'From the collected novel Different Seasons (1982)' // Additional property for extra credit catergory
   },
   {
     quote: "If you don't control your temper, your temper will control you",
@@ -183,6 +140,10 @@ function printQuote() {
 
       if (quoteSelected.hasOwnProperty('year')) {
         message += `<span class="year">${quoteSelected.year}</span>`;
+      }
+
+      if (quoteSelected.hasOwnProperty('collection')) {
+        message += `<span class="year">${quoteSelected.collection}</span>`;
       }
       
       message += `</p>`;
