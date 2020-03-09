@@ -3,15 +3,10 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-
-
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
 /*** 
- * `quotes` array 
+ * `quotes` array containing multiple quote objects.
 ***/
+
 let quotes = [
   {
     quote: 'Monsters are real, Ghosts are too. They live inside of us and sometimes they win.',
@@ -83,12 +78,14 @@ let quotes = [
   }
 ];
 
-let intervId;
+let intervId; //id generated for interval function.
+
 /***
  * `getRandomQuote` function 
  *  Obtains a number between 0 and quotes.length
- *  and then returns a random quote objecr
+ *  and then returns a random quote object
 ***/
+
 function getRandomQuote() {
   let num = Math.floor(Math.random() * quotes.length);
   return quotes[num];   
@@ -96,8 +93,9 @@ function getRandomQuote() {
 
 /***
  * Random colour functions
- * 
+ * Generates a random colour by using random numbers.
  */
+
 function randomRGB() {
   return Math.floor(Math.random() * 256 );
 }
@@ -110,27 +108,44 @@ function randomColour() {
   return color;
 }
 
+/***
+ * Function to change the background colour of the page to
+ * a randomly selected colour.
+*/
+
 function setBodyColour() {
   let setColour = randomColour();
   document.body.style.background = setColour; 
 }
 
-function newTimer() {
-  intervId = setInterval(printQuote, 10000);
+/**
+ * Functions that create a timer that continually
+ * call a function until stopTimer is called
+ */
+
+function newTimer(aFunction) {
+  intervId = setInterval(aFunction, 10000);
 }
 
 function stopTimer() {
   clearInterval(intervId);
 }
 
-newTimer();
+// Function call to initialise page with timed change
+
+newTimer(printQuote);
 
 /***
  * `printQuote` function
+ * Prints a randomly selected quote to page
+ * Changes page background to a random colour
+ * Re initialises timer on click so timer restarts.
+ * Adds properties where available.
 ***/
+
 function printQuote() {
   stopTimer();
-  newTimer();
+  newTimer(printQuote);
   setBodyColour();
   
   let quoteSelected = getRandomQuote();
