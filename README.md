@@ -1,17 +1,15 @@
-TechDegree Project 1
-Random Quote Generator
+<img src='readme-images/treehouse.png' width='200' height='50' alt='treehouse logo'/>
 
-CONTENTS OF THIS FILE
----------------------
+# TechDegree-Project-1
 
- * Introduction
- 
- A random quote generator built with vanilla javascript.
- 
- * Requirements
- * Recommended modules
- * Installation
- * Configuration
- * Troubleshooting
- * FAQ
- * Maintainers
+## A Random Quote Generator
+
+<img src='readme-images/front.jpeg' width='350' height='200' alt='project preview'/>
+
+## Live Demo
+
+https://webdevbrum.github.io/TechDegree-Project-1/
+
+## Getting Started
+
+No pre requisite installation required, built using Vanilla JavaScript
